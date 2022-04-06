@@ -29,3 +29,5 @@ init.sh
 
 *kubeconfig_
 /.idea/
+
+.env
