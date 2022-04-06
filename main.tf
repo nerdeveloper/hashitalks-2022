@@ -33,7 +33,7 @@ module "remote_state" {
 module "vm" {
   source            = "git::https://github.com/nerdeveloper/terraform-google-vm.git//modules/compute_instance"
   region            = var.region
-  network = module.vpc_network.network
+  network           = module.vpc_network.network
   subnetwork        = module.vpc_network.public_subnetwork
   num_instances     = var.num_instances
   hostname          = "${var.project}-bastion-${var.environment}-${random_string.suffix.result}"
@@ -46,15 +46,15 @@ module "vm" {
 }
 
 module "instance_template" {
-  source          = "git::https://github.com/terraform-google-modules/terraform-google-vm.git//modules/instance_template"
-  region          = var.region
-  project_id      = var.project
-  network = module.vpc_network.network
-  subnetwork      = module.vpc_network.public_subnetwork
-  service_account = var.bastion_service_account
-  source_image_family = var.image_family
+  source               = "git::https://github.com/terraform-google-modules/terraform-google-vm.git//modules/instance_template"
+  region               = var.region
+  project_id           = var.project
+  network              = module.vpc_network.network
+  subnetwork           = module.vpc_network.public_subnetwork
+  service_account      = var.bastion_service_account
+  source_image_family  = var.image_family
   source_image_project = var.source_image_project
-  disk_size_gb = var.bastion_disk_size_gb
-  tags = ["${var.project}-firewall-${var.environment}-${random_string.suffix.result}"]
-  can_ip_forward = "false"
+  disk_size_gb         = var.bastion_disk_size_gb
+  tags                 = ["${var.project}-firewall-${var.environment}-${random_string.suffix.result}"]
+  can_ip_forward       = "false"
 }

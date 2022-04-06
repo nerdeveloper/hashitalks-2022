@@ -1,4 +1,4 @@
 variable "remote_state_storage_class" {
-  type = string
+  type    = string
   default = "REGIONAL"
 }

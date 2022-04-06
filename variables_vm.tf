@@ -1,15 +1,15 @@
 variable "bastion_zone" {
-  type = string
+  type    = string
   default = "us-west2-a"
 }
 
 variable "image_family" {
-  type = string
+  type    = string
   default = "ubuntu-1804-lts"
 }
 
 variable "bastion_disk_size_gb" {
-  type = string
+  type    = string
   default = "50"
 }
 
@@ -27,7 +27,7 @@ variable "bastion_service_account" {
 }
 
 variable "num_instances" {
-  type = string
+  type    = string
   default = "1"
 }
 

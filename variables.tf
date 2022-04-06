@@ -1,16 +1,16 @@
 variable "project" {
-  type = string
+  type    = string
   default = "ps-workspace"
 
 }
 
 variable "region" {
-  type = string
+  type    = string
   default = "us-west2"
 }
 
 variable "environment" {
-  type = string
+  type    = string
   default = "dev"
 
 }
