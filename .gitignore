@@ -24,7 +24,6 @@ sample-app*
 *.vscode
 *.DS_Store
 
-init.sh
 *cred*
 
 *kubeconfig_
