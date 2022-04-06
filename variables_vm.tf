@@ -5,7 +5,7 @@ variable "bastion_zone" {
 
 variable "image_family" {
   type    = string
-  default = "ubuntu-1804-lts"
+  default = "ubuntu-2004-lts"
 }
 
 variable "bastion_disk_size_gb" {
